@@ -1,0 +1,143 @@
+1 - Hello world
+2 - Sum of 2 numbers
+3 - Even or odd
+4 - Factorial (For loop)
+5 - Multiplication tables (For loop)
+6 - Finding prime numbers (While loop)
+7 - Fibonacci series (For loop)
+8 - Simple calculator
+9 - Finding the largest number
+10 - Reversin ga number
+11 - Palendrome
+12 - Sum of digits
+13 - Simple intrest
+14 - Finding the larest number in array
+15 - Area of a rectangle
+16 - Eligible to vote (if conditions)
+17 - Eligible to vote (single line)
+18 - Positive, negative or zero (single line)
+19 - Positive, negative or zero (switch method)
+20 - Weekday (swich method)
+21 - Tables (while loop and do)
+22 - Even numbers from a list (for loop)
+23 - Even numbers from a list (while loop)
+24 - Swapping 2 numbers without 3rd number
+25 - Counting the number of digits
+26 - Checking the Armstrong number
+27 - Sum of digits of a number
+28 - Reversing a number
+29 - Greatest Common Diviser
+30 - LCM
+31 - Day of the week (simple switch method)
+32 - Weekend or weekday (simple switch method)
+33 - weekend or weekday (switch without break)
+34 - Adding 2 numbers (F 1)
+35 - Adding 2 numbers (F 2)
+36 - Hello World (F)
+37 - Even numbers (F)
+38 - Largest among 3 numbers (F) (Single line conditional statement)
+39 - Factorial (F)
+40 - Advanced calculator (F)
+41 - Find the largest element of an array 
+42 - Printing a array in reverse 
+43 - Creating a array from users input (for loop)
+44 - Multidimensional arrays
+45 - sum of numbers (method overloadding)
+46 - Factorial of numbers (Resurssion)
+47 - Sum of natural number (Recurssion)
+48 - Creating a empty array
+49 - Creating a string array ang getting user values
+50 - Creating a 2D array and using loops and printing elements
+51 - Some inbuilt methods on arraylists
+52 - Creating a multidimensional arraylists
+53 - Finding the max value in a 2D arraylist
+54 - Finding the max value of a array
+55 - String methods
+56 - Different cases while printing
+57 - Looing and increasing a string length using builder class
+58 - checking string Palendrome
+59 - Pattern Triangle
+60 - Pattern Square 
+61 - Pattern inverse Triangle
+62 - Pattern pyramid
+63 - Pattern number triangle
+64 - Pattern number pyramid
+65 - Pattern diamond
+66 - Arthematic Operators
+67 - Bitwise Operators
+68 - Math module 
+69 - Finding a unique element in a array using xor operator (F)
+70 - Finding the bit present at certain position of a number
+71 - Finding the bit present at certain position of a number (F)
+72 - Finding the odd number form positive and negative number arraylist
+73 - Even or odd using bitwise operator (F)
+74 - Defining constructor
+75 - Parametrise constructor
+76 - Copying constructor
+77 - Using this operator in constructor
+78 - initializing default values in constructor
+79 - Addition (C)
+80 - Addition and Subraction(user input) (C)
+81 - calculator using encapculation
+82 - Bankaccount (C) (E)
+83 - Dog barking (I)
+84 - Multilevel inheritance (I)
+85 - Testing final keyword (Variable)
+86 - preventing overriding using final
+87 - preventing inheritance using final
+88 - Method overloadding
+89 - Method overriding
+90 - Employee details (I)(C)(overriding)
+91 - Vehicle Management System (oops concepts)
+92 - Bank acc Management (C) (E)
+93 - Class hirarchy
+94 - Class-level method
+95 - employee (I)
+96 - Appliances (Overriding)
+97 - Shallow Copying
+98 - Deep copying
+99 - Arthematic exception handling
+100 - NullpointerException
+101 - Garbage collection
+102 - Using finalize with garbage collection
+103 - Unig and interfaces and garbage collection
+104 - Interface and garbage collection
+105 - Defining Abstract method
+106 - Non static inner class
+107 - Static inner class
+108 - Anonymous inner class
+109 - local inner class
+110 - Inner classes
+111 - Inner classes
+112 - Inner classes
+113 - Single interface inheritance
+114 - multiple interface inheritance
+115 - animals (Class and interface inheritance) (GC)
+116 - Number formating exception
+117 - exception handling with multiple catch statements
+118 - Collections
+119 - Creating and iteraing through an arraylist
+120 - Removing elements for arraylist
+121 - Sorting, fetching, index, reversing arraylists
+122 - Function of HashSet
+123 - User defined errors
+124 - User defined errors
+125 - User defined errors
+126 - calculator
+127 - HashSet programs
+128 - User defined HashSet
+129 - TreeSet programs
+130 - User defined TreeSet
+131 - Difference btw HashSet and TreeSet
+132 - operations on arraylist
+133 - Shallow copying
+134 - Depp copying
+135 - Practice vehicles
+136 - Practice HashSet
+137 - Practice TreeSet
+138 - Shallow Copying
+139 - Deep copying
+
+
+
+
