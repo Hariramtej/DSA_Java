@@ -4555,6 +4555,81 @@
 //         }
 // }
 
+// 140
+
+// import java.util.Scanner;
+
+// public class Programs {
+
+//         public static void main(String[] args) {
+//                 Scanner Scanner = new Scanner(System.in);
+
+//                 System.out.print("Enter the length of the Array: ");
+//                 int len = Scanner.nextInt();
+
+//                 int[][] numArray = new int[len][];
+//                 int noOfColumns;
+
+//                 for (int i = 0; i < len ; i ++){
+//                         System.out.print("Enter the no of elements in " + i + " row:");
+//                         noOfColumns = Scanner.nextInt();
+//                         numArray[i] = new int[noOfColumns];
+
+//                         for (int j = 0;j< noOfColumns; j++){
+//                                 System.out.print("Enter the elements: ");
+//                                 numArray[i][j] = Scanner.nextInt();
+//                         }
+//                 }
+
+//                 for (int i = 0; i < numArray.length; i++){
+//                         for (int j = 0; j < numArray[i].length; j++){
+//                                 System.out.print(numArray[i][j] + " ");
+//                         }
+//                         System.out.println();
+//                 }
+//         }
+// }
+
+// 141
+
+// public class Programs {
+
+//         public static void main(String[] args) {
+//                 int[][] numArray = new int[3][];
+
+//                 numArray[0] = new int[]{7,8,9};
+//                 numArray[1] = new int[]{1,5,};
+//                 numArray[2] = new int[]{6,3,9,4};
+
+//                 for (int i = 0; i < numArray.length; i++){
+//                         for (int j = 0; j < numArray[i].length; j++){
+//                                 System.out.print(numArray[i][j] + " ");
+//                         }
+//                         System.out.println();
+//                 }
+//         }
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
