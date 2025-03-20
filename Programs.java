@@ -4610,8 +4610,61 @@
 //         }
 // }
 
+// 142
 
+// import java.util.HashMap;
 
+// public class Programs{
+//         public static int[] twoSum(int[] nums, int target) {
+//                 HashMap<Integer, Integer> map = new HashMap<>();
+//                 for (int i = 0; i < nums.length; i++){
+//                         int complement = target - nums[i];
+//                         if (map.containsKey(complement)){
+//                                 return new int[] {map.get(complement), i};
+//                         }
+//                         map.put(nums[i],i);
+//                 }
+//                 throw new IllegalArgumentException("No two sum solution");
+//         }
+
+//         public static void main(String[] args) {
+//                 int[] nums = {2,7,11,15};
+//                 int target = 9;
+//                 int[] result = twoSum(nums, target);
+//                 System.out.println("Tndices: " + result[0] + ", " + result);
+//         }
+// }
+
+// 143
+
+import java.util.HashMap;
+
+public class Programs {
+
+        public static void main(String[] args) {
+                HashMap<String, Integer> map = new HashMap<>();
+
+                map.put("Alice", 25);
+                map.put("Bob", 30);
+                map.put("Charlie", 35);
+
+                System.out.println("HashMap after adding elements: " + map);
+
+                System.out.println("Bod's age: " + map.get("Bob"));
+
+                System.out.println("Contains key Alice: " + map.containsKey("Alice"));
+
+                System.out.println("Contains value 35: " + map.containsKey(35));
+
+                map.remove("Charlie");
+
+                System.out.println("HashMap after removing Charlie: "  + map);
+
+                System.out.println("Size of the HashMap: " + map.size());
+
+                System.out.println("Is the HashMap empty? " + map.isEmpty());
+        }
+}
 
 
 
