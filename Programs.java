@@ -4637,43 +4637,167 @@
 
 // 143
 
-import java.util.HashMap;
+// import java.util.HashMap;
 
-public class Programs {
+// public class Programs {
 
-        public static void main(String[] args) {
-                HashMap<String, Integer> map = new HashMap<>();
+//         public static void main(String[] args) {
+//                 HashMap<String, Integer> map = new HashMap<>();
 
-                map.put("Alice", 25);
-                map.put("Bob", 30);
-                map.put("Charlie", 35);
+//                 map.put("Alice", 25);
+//                 map.put("Bob", 30);
+//                 map.put("Charlie", 35);
 
-                System.out.println("HashMap after adding elements: " + map);
+//                 System.out.println("HashMap after adding elements: " + map);
 
-                System.out.println("Bod's age: " + map.get("Bob"));
+//                 System.out.println("Bod's age: " + map.get("Bob"));
 
-                System.out.println("Contains key Alice: " + map.containsKey("Alice"));
+//                 System.out.println("Contains key Alice: " + map.containsKey("Alice"));
 
-                System.out.println("Contains value 35: " + map.containsKey(35));
+//                 System.out.println("Contains value 35: " + map.containsKey(35));
 
-                map.remove("Charlie");
+//                 map.remove("Charlie");
 
-                System.out.println("HashMap after removing Charlie: "  + map);
+//                 System.out.println("HashMap after removing Charlie: "  + map);
 
-                System.out.println("Size of the HashMap: " + map.size());
+//                 System.out.println("Size of the HashMap: " + map.size());
 
-                System.out.println("Is the HashMap empty? " + map.isEmpty());
+//                 System.out.println("Is the HashMap empty? " + map.isEmpty());
+//         }
+// }
+
+// 144
+
+interface rules{
+        void result();
+}
+
+class Addition implements rules{
+        int num1;
+        int num2;
+
+        Addition(int num1, int num2){
+                this.num1 = num1;
+                this.num2 = num2;
+        }
+
+        public void result(){
+                System.out.println(num1 + num2);
+        }
+
+        protected void finalize() throws Throwable{
+                try{
+                        System.out.println("Resources cleaned");
+                } finally{
+                        super.finalize();
+                }
+        }
+}
+
+class Subraction implements rules{
+        int num1;
+        int num2;
+
+        Subraction(int num1, int num2){
+                this.num1 = num1;
+                this.num2 = num2;
+        }
+
+        public void result(){
+                System.out.println(num1 - num2);
+        }
+
+        protected void finalize() throws Throwable{
+                try{
+                        System.out.println("Resources cleaned");
+                } finally{
+                        super.finalize();
+                }
+
         }
 }
 
 
+class Multiplication implements rules{
+        int num1;
+        int num2;
+
+        Multiplication(int num1, int num2){
+                this.num1 = num1;
+                this.num2 = num2;
+        }
+
+        public void result(){
+                System.out.println(num1 * num2);
+        }
+
+        protected void finalize() throws Throwable{
+                try{
+                        System.out.println("Resources cleaned");
+                } finally{
+                        super.finalize();
+                }
+        }
+}
+
+class Division implements rules{
+        int num1;
+        int num2;
+
+        Division(int num1, int num2){
+                this.num1 = num1;
+                this.num2 = num2;
+        }
+
+        public void result(){
+                try{
+                 int result = num1 / num2;
+                 System.out.println(result);
+                } catch (ArithmeticException e){
+                 System.out.println("Error: Division by zero is not allowerd.");
+                } 
+        }
+
+        protected void finalize() throws Throwable{
+                try{
+                        System.out.println("Resources cleaned");
+                } finally{
+                        super.finalize();
+                }
+        }
+}
+
+public class Programs {
+
+        public static void main(String[] args) {
+                int num1 = 10;
+                int num2 = 0;
+
+                Addition add = new Addition(num1, num2);
+                Subraction subract = new Subraction(num1, num2);
+                Multiplication multiply = new Multiplication(num1, num2);
+                Division divide = new Division(num1, num2);
 
 
+                add.result();
+                subract.result();
+                multiply.result();
+                divide.result();
 
+                add = null;
+                subract = null;
+                multiply = null;
+                divide = null;
 
+                System.gc();
 
-
-
+                try {
+                        Thread.sleep(1000);
+                } catch (InterruptedException e){
+                        e.printStackTrace();
+                }
+        }
+}
 
 
 
