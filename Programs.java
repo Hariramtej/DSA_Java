@@ -4668,143 +4668,170 @@
 
 // 144
 
-interface rules{
-        void result();
-}
+// interface rules{
+//         void result();
+// }
 
-class Addition implements rules{
-        int num1;
-        int num2;
+// class Addition implements rules{
+//         int num1;
+//         int num2;
 
-        Addition(int num1, int num2){
-                this.num1 = num1;
-                this.num2 = num2;
+//         Addition(int num1, int num2){
+//                 this.num1 = num1;
+//                 this.num2 = num2;
+//         }
+
+//         public void result(){
+//                 System.out.println(num1 + num2);
+//         }
+
+//         protected void finalize() throws Throwable{
+//                 try{
+//                         System.out.println("Resources cleaned");
+//                 } finally{
+//                         super.finalize();
+//                 }
+//         }
+// }
+
+// class Subraction implements rules{
+//         int num1;
+//         int num2;
+
+//         Subraction(int num1, int num2){
+//                 this.num1 = num1;
+//                 this.num2 = num2;
+//         }
+
+//         public void result(){
+//                 System.out.println(num1 - num2);
+//         }
+
+//         protected void finalize() throws Throwable{
+//                 try{
+//                         System.out.println("Resources cleaned");
+//                 } finally{
+//                         super.finalize();
+//                 }
+
+//         }
+// }
+
+
+// class Multiplication implements rules{
+//         int num1;
+//         int num2;
+
+//         Multiplication(int num1, int num2){
+//                 this.num1 = num1;
+//                 this.num2 = num2;
+//         }
+
+//         public void result(){
+//                 System.out.println(num1 * num2);
+//         }
+
+//         protected void finalize() throws Throwable{
+//                 try{
+//                         System.out.println("Resources cleaned");
+//                 } finally{
+//                         super.finalize();
+//                 }
+//         }
+// }
+
+// class Division implements rules{
+//         int num1;
+//         int num2;
+
+//         Division(int num1, int num2){
+//                 this.num1 = num1;
+//                 this.num2 = num2;
+//         }
+
+//         public void result(){
+//                 try{
+//                  int result = num1 / num2;
+//                  System.out.println(result);
+//                 } catch (ArithmeticException e){
+//                  System.out.println("Error: Division by zero is not allowerd.");
+//                 } 
+//         }
+
+//         protected void finalize() throws Throwable{
+//                 try{
+//                         System.out.println("Resources cleaned");
+//                 } finally{
+//                         super.finalize();
+//                 }
+//         }
+// }
+
+// public class Programs {
+
+//         public static void main(String[] args) {
+//                 int num1 = 10;
+//                 int num2 = 0;
+
+//                 Addition add = new Addition(num1, num2);
+//                 Subraction subract = new Subraction(num1, num2);
+//                 Multiplication multiply = new Multiplication(num1, num2);
+//                 Division divide = new Division(num1, num2);
+
+
+//                 add.result();
+//                 subract.result();
+//                 multiply.result();
+//                 divide.result();
+
+//                 add = null;
+//                 subract = null;
+//                 multiply = null;
+//                 divide = null;
+
+//                 System.gc();
+
+//                 try {
+//                         Thread.sleep(1000);
+//                 } catch (InterruptedException e){
+//                         e.printStackTrace();
+//                 }
+//         }
+// }
+
+// 145
+
+import java.util.Scanner;
+
+class ageBelowRequired extends Exception{
+        public ageBelowRequired(){
+                super("The age is not satisfied");
         }
 
-        public void result(){
-                System.out.println(num1 + num2);
-        }
-
-        protected void finalize() throws Throwable{
-                try{
-                        System.out.println("Resources cleaned");
-                } finally{
-                        super.finalize();
-                }
-        }
-}
-
-class Subraction implements rules{
-        int num1;
-        int num2;
-
-        Subraction(int num1, int num2){
-                this.num1 = num1;
-                this.num2 = num2;
-        }
-
-        public void result(){
-                System.out.println(num1 - num2);
-        }
-
-        protected void finalize() throws Throwable{
-                try{
-                        System.out.println("Resources cleaned");
-                } finally{
-                        super.finalize();
-                }
-
-        }
-}
-
-
-class Multiplication implements rules{
-        int num1;
-        int num2;
-
-        Multiplication(int num1, int num2){
-                this.num1 = num1;
-                this.num2 = num2;
-        }
-
-        public void result(){
-                System.out.println(num1 * num2);
-        }
-
-        protected void finalize() throws Throwable{
-                try{
-                        System.out.println("Resources cleaned");
-                } finally{
-                        super.finalize();
-                }
-        }
-}
-
-class Division implements rules{
-        int num1;
-        int num2;
-
-        Division(int num1, int num2){
-                this.num1 = num1;
-                this.num2 = num2;
-        }
-
-        public void result(){
-                try{
-                 int result = num1 / num2;
-                 System.out.println(result);
-                } catch (ArithmeticException e){
-                 System.out.println("Error: Division by zero is not allowerd.");
-                } 
-        }
-
-        protected void finalize() throws Throwable{
-                try{
-                        System.out.println("Resources cleaned");
-                } finally{
-                        super.finalize();
-                }
+        public ageBelowRequired(String message){
+                super(message);
         }
 }
 
 public class Programs {
 
         public static void main(String[] args) {
-                int num1 = 10;
-                int num2 = 0;
+                Scanner scanner = new Scanner(System.in);
 
-                Addition add = new Addition(num1, num2);
-                Subraction subract = new Subraction(num1, num2);
-                Multiplication multiply = new Multiplication(num1, num2);
-                Division divide = new Division(num1, num2);
+                System.out.println("Enter your are: ");
+                int age = scanner.nextInt();
 
-
-                add.result();
-                subract.result();
-                multiply.result();
-                divide.result();
-
-                add = null;
-                subract = null;
-                multiply = null;
-                divide = null;
-
-                System.gc();
-
-                try {
-                        Thread.sleep(1000);
-                } catch (InterruptedException e){
-                        e.printStackTrace();
+                try{
+                        if (age < 18){
+                                throw new ageBelowRequired("Age must be 18 or above.");
+                        }       
+                } catch (ageBelowRequired e){
+                        System.out.println(e.getMessage());
+                } finally {
+                        scanner.close();
                 }
         }
 }
-
-
-
-
-
-
-
 
 
 
