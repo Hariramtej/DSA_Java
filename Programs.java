@@ -4718,7 +4718,38 @@
 // }
 
 
-// class Multiplication implements rules{
+// class Multiplication i
+// import java.util.Scanner;
+
+// class ageBelowRequired extends Exception{
+//         public ageBelowRequired(){
+//                 super("The age is not satisfied");
+//         }
+
+//         public ageBelowRequired(String message){
+//                 super(message);
+//         }
+// }
+
+// public class Programs {
+
+//         public static void main(String[] args) {
+//                 Scanner scanner = new Scanner(System.in);
+
+//                 System.out.print("Enter your are: ");
+//                 int age = scanner.nextInt();
+
+//                 try{
+//                         if (age < 18){
+//                                 throw new ageBelowRequired("Age must be 18 or above.");
+//                         }       
+//                 } catch (ageBelowRequired e){
+//                         System.out.println(e.getMessage());
+//                 } finally {
+//                         scanner.close();
+//                 }
+//         }
+// }mplements rules{
 //         int num1;
 //         int num2;
 
@@ -4801,40 +4832,66 @@
 
 // 145
 
-import java.util.Scanner;
+// import java.util.Scanner;
 
-class ageBelowRequired extends Exception{
-        public ageBelowRequired(){
-                super("The age is not satisfied");
+// class ageBelowRequired extends Exception{
+//         public ageBelowRequired(){
+//                 super("The age is not satisfied");
+//         }
+
+//         public ageBelowRequired(String message){
+//                 super(message);
+//         }
+// }
+
+// public class Programs {
+
+//         public static void main(String[] args) {
+//                 Scanner scanner = new Scanner(System.in);
+
+//                 System.out.print("Enter your are: ");
+//                 int age = scanner.nextInt();
+
+//                 try{
+//                         if (age < 18){
+//                                 throw new ageBelowRequired("Age must be 18 or above.");
+//                         }       
+//                 } catch (ageBelowRequired e){
+//                         System.out.println(e.getMessage());
+//                 } finally {
+//                         scanner.close();
+//                 }
+//         }
+// }
+
+// 146
+
+interface Vehicle {
+        void start();
+}
+
+interface ElectricVehicle extends Vehicle{
+        void charge();
+}
+
+class Tesla implements ElectricVehicle{
+        public void start(){
+                System.out.println("The engine has been started");
         }
 
-        public ageBelowRequired(String message){
-                super(message);
+        public void charge(){
+                System.out.println("The vehicle was charging.");
         }
 }
 
 public class Programs {
 
         public static void main(String[] args) {
-                Scanner scanner = new Scanner(System.in);
-
-                System.out.println("Enter your are: ");
-                int age = scanner.nextInt();
-
-                try{
-                        if (age < 18){
-                                throw new ageBelowRequired("Age must be 18 or above.");
-                        }       
-                } catch (ageBelowRequired e){
-                        System.out.println(e.getMessage());
-                } finally {
-                        scanner.close();
-                }
+                Tesla tesla1 = new Tesla();
+                tesla1.start();
+                tesla1.charge();
         }
 }
-
-
-
 
 
 

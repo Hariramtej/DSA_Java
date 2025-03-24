@@ -138,6 +138,11 @@
 138 - Shallow Copying
 139 - Deep copying
 140 - Jagged array
+141 - Jagged array
+142 - Hashmap
+143 - Hashmap methods
+144 - garbage collection, exception
+145 - Userdefined exception
 
 
 
