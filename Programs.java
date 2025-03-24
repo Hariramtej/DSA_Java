@@ -4866,32 +4866,131 @@
 
 // 146
 
-interface Vehicle {
-        void start();
+// interface Vehicle {
+//         void start();
+// }
+
+// interface ElectricVehicle extends Vehicle{
+//         void charge();
+// }
+
+// class Tesla implements ElectricVehicle{
+//         public void start(){
+//                 System.out.println("The engine has been started");
+//         }
+
+//         public void charge(){
+//                 System.out.println("The vehicle was charging.");
+//         }
+// }
+
+// public class Programs {
+
+//         public static void main(String[] args) {
+//                 Tesla tesla1 = new Tesla();
+//                 tesla1.start();
+//                 tesla1.charge();
+//         }
+// }
+
+// 147
+
+interface NotificationService{
+        void sendNotification(String recipent, String message);
+
+        default void logNotification(String serviceName, String status){
+                System.out.println("[Log] Service: " + serviceName + ", Status: " + status);
+        };
+
+        static String getServiceVersion(){
+                return "v1.0";
+        }
 }
 
-interface ElectricVehicle extends Vehicle{
-        void charge();
+interface SMSNotification extends NotificationService {
+        default void sendEncryptedSMS(String recipient, String encryptedMessage) {
+            System.out.println("Sending encrypted SMS to " + recipient + ": " + encryptedMessage);
+        }
+
+        default void sendNotification(String recipient, String message) {
+            logNotification("SMS", "Sent");
+            System.out.println("SMS sent to " + recipient + ": " + message);
+        }
 }
 
-class Tesla implements ElectricVehicle{
-        public void start(){
-                System.out.println("The engine has been started");
+
+interface EmailNotification extends NotificationService{
+
+        default void sendHTMLEmail(String recipient, String htmlContent){
+                System.out.println("Sending HTML email to " + recipient + ": " + htmlContent);
         }
 
-        public void charge(){
-                System.out.println("The vehicle was charging.");
+        default void sendNotification(String recipent, String message) {
+                logNotification("Email", "Sent");
+                System.out.println("Email sent to " + recipent + ": " + message);
         }
+}
+
+interface SecureNotification extends NotificationService {
+
+        default void sendNotification(String recipient, String message) {
+            logNotification("Secure", "Sent");
+            System.out.println("Secure notification sent to " + recipient + ": " + message);
+        }
+}
+
+class HybridNotifier implements EmailNotification, SecureNotification{
+        public void sendNotification(String rcipient, String message){
+                SecureNotification.super.sendNotification(rcipient, message);
+                System.out.println("Hybrid notification sent securely.");
+        }
+}
+
+class AppNotificationManager implements EmailNotification, SMSNotification,SecureNotification{
+        public AppNotificationManager(){
+                System.out.println("Notification Service Version: " + NotificationService.getServiceVersion());
+        }
+
+        public void sendNotification(String recipient, String message){
+                if(message.contains("@")){
+                        EmailNotification.super.sendNotification(recipient, message);
+                }
+        }
+
 }
 
 public class Programs {
-
         public static void main(String[] args) {
-                Tesla tesla1 = new Tesla();
-                tesla1.start();
-                tesla1.charge();
+            NotificationService emailService = new AppNotificationManager();
+            emailService.sendNotification("user@example.com", "Hello via Email!");
+    
+            NotificationService smsService = new AppNotificationManager();
+            smsService.sendNotification("1234567890", "Hello via SMS!");
+    
+            // Direct calls to specialized methods
+            EmailNotification email = new AppNotificationManager();
+            email.sendHTMLEmail("user@example.com", "<h1>HTML Email</h1>");
+    
+            SMSNotification sms = new AppNotificationManager();
+            sms.sendEncryptedSMS("1234567890", "Encrypted Hello!");
+    
+            // Testing HybridNotifier (conflict resolution)
+            HybridNotifier hybrid = new HybridNotifier();
+            hybrid.sendNotification("admin@secure.com", "Top-secret message");
         }
-}
+    }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
